@@ -9,6 +9,17 @@ import "./App.css";
 const ElectionResults = ({ democrats, republicans, independent }) => {
   const totalVotes = democrats + republicans + independent;
 
+  if (totalVotes === 0) {
+    return (
+      <div className="vote-statistics">
+        <h3>Election Results</h3>
+        <p style={{ color: "#c9201e" }}>
+          Currently, the system has not received any votes yet.
+        </p>
+      </div>
+    );
+  }
+
   const democratPercentage = (democrats / totalVotes) * 100 || 0;
   const republicanPercentage = (republicans / totalVotes) * 100 || 0;
   const independentPercentage = (independent / totalVotes) * 100 || 0;
