@@ -30,5 +30,14 @@ body {
 .party-container {
   display: flex;
   justify-content: space-around;
+  margin: 0 auto;
   max-width: 700px;
+}
+
+.vote-statistics {
+  border: 3px solid #0953a5;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 0 auto;
+  max-width: 75%;
 }
